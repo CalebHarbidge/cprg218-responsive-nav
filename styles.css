@@ -1,3 +1,68 @@
 *{
 	box-sizing:border-box;
 }
+body{
+	font-family: Arial, sans-serif;
+}
+span.icon svg{
+	max-width: 50px;
+	max-height: 50px;
+}
+header{
+	background-color: navy;
+	color: aliceblue;
+}
+nav a{
+	color: antiquewhite;
+	text-decoration: none;
+}
+nav a:hover{
+	color:yellow;
+	text-decoration: underline;
+}
+nav ul{
+	display:flex;
+	justify-content: center;
+	gap: 1rem;
+	padding-left: 0;
+}
+nav ul li{
+	list-style-type: none;
+	flex:1;
+	text-align: center;
+}
+span.text{
+	display: none;
+}
+
+/* Tablet or small screen */
+@media (min-width: 650px){
+	header{
+		background-color: darkslateblue;
+	}
+	span.text{
+		display: block;
+	}
+}
+
+/* Laptop or large screen */
+@media (min-width: 900px){
+	header{
+		background-color: midnightblue;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 0 10px 0 10px;
+	}
+	nav ul li a{
+		display: flex;
+		align-items: center;
+	}
+	.icon svg{
+		min-width: 30px;
+		min-height: 30px;
+	}
+	.text{
+		font-size: 120%;
+	}
+}
